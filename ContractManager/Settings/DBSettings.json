@@ -1,0 +1,9 @@
+{
+  "Database": {
+    "Type": "MSSQL",
+    "ConnectionStrings": {
+      "MSSQL": "workstation id=ContractManagerDB.mssql.somee.com;packet size=4096;user id=denis1995_SQLLogin_1;pwd=vu9baopeon;data source=ContractManagerDB.mssql.somee.com;persist security info=False;initial catalog=ContractManagerDB",
+      //"MSSQL": "server=DESKTOP-IFQ91DF\\SQLEXPRESS01;database=ContractManagerDB;trusted_connection=true"
+    }
+  }
+}

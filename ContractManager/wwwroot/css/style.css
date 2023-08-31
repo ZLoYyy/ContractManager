@@ -1,0 +1,408 @@
+/* =====================================
+Template Name: Eshop
+Author Name: Naimur Rahman
+Author URI: http://www.wpthemesgrid.com/
+Description: Eshop - eCommerce HTML5 Template.
+Version:1.0
+========================================*/
+/*======================================
+[ CSS Table of contents ]
+01. Preloader CSS
+02. Header CSS
+	+ Logo
+	+ Category Menu
+	+ Main Menu
+03. Hero Area CSS
+04. Small Banner CSS
+05. Medium Banner CSS
+06. Single Product CSS
+07. Shop Sidebar CSS
+08. Shop Single CSS
+09. Shop Home List CSS
+10. Cart CSS
+11. Checkout CSS
+12. Login & Register CSS
+13. Cowndown CSS
+14. Shop Services CSS
+15. Newslatter CSS
+16. About Us CSS
+17. Team CSS
+18. Blog CSS	
+	+ Blog Archive
+	+ Blog Sidebar
+	+ Blog Single
+19. Contact CSS
+20. 404 Error CSS
+21. Footer CSS
+========================================*/
+/* Preloader */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999999;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.preloader-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.preloader-icon {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	padding: 0px;
+}
+
+	.preloader-icon span {
+		position: absolute;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		background: #F7941D;
+		-webkit-animation: preloader-fx 1.6s linear infinite;
+		animation: preloader-fx 1.6s linear infinite;
+	}
+
+		.preloader-icon span:last-child {
+			animation-delay: -0.8s;
+			-webkit-animation-delay: -0.8s;
+		}
+
+@keyframes preloader-fx {
+	0% {
+		transform: scale(0, 0);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: scale(1, 1);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes preloader-fx {
+	0% {
+		-webkit-transform: scale(0, 0);
+		opacity: 0.5;
+	}
+
+	100% {
+		-webkit-transform: scale(1, 1);
+		opacity: 0;
+	}
+}
+/* End Preloader */
+
+/*Main menu*/
+.header {
+	vertical-align: middle;
+	/* text-align: center; */
+	padding: 25px;
+	height: 75px;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	background: #999;
+}
+.header * {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+	-moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+	-moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+
+.header .main-menu {
+	text-align: center;
+}
+
+.btn {
+	color: #999;
+	background: rgba(0, 0, 0);
+	padding: 10px 20px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.btn:hover {
+		border: none;
+		background: rgba(0, 0, 0, 0.4);
+		background: #fff;
+		padding: 20px 20px;
+		
+		color: #1b1b1b;
+	}
+
+/*End Main menu*/
+
+/*Content*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: normal;
+}
+
+h1 {
+	padding: 0 0 10px 0;
+}
+
+ol {
+	margin-left: 30px;
+	counter-reset: item;
+}
+
+.wtree li {
+	list-style-type: none;
+	margin: 10px 0 10px 10px;
+	position: relative;
+}
+
+	.wtree li:before {
+		content: "";
+		counter-increment: item;
+		position: absolute;
+		top: -10px;
+		left: -30px;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		width: 30px;
+		height: 15px;
+	}
+
+	.wtree li:after {
+		position: absolute;
+		content: "";
+		top: 5px;
+		left: -30px;
+		border-left: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		width: 30px;
+		height: 100%;
+	}
+
+	.wtree li:last-child:after {
+		display: none;
+	}
+
+	.wtree li span {
+		display: block;
+		border: 1px solid #ddd;
+		padding: 10px;
+		color: #666666;
+		text-decoration: none;
+	}
+
+		.wtree li span:before {
+			content: counters(item, ".") " ";
+		}
+
+		.wtree li span:hover, .wtree li span:focus {
+			color: #000;
+			border: 1px solid #474747;
+		}
+
+			.wtree li span:hover + ol li span, .wtree li span:focus + ol li span {
+				color: #000;
+				border: 1px solid #474747;
+			}
+
+			.wtree li span:hover + ol li:after, .wtree li span:hover + ol li:before, .wtree li span:focus + ol li:after, .wtree li span:focus + ol li:before {
+				border-color: #474747;
+			}
+
+li span {
+	background-color: #DDF3FE;
+}
+
+li li span {
+	background-color: #DDEBC8;
+}
+
+li li li span {
+	background-color: #FEFCD5;
+}
+
+.display {
+	margin-right: 12px;
+	font-weight: bold;
+}
+
+input, label {
+	margin: 12px 0px 20px 0px;
+}
+
+label {
+	padding-left: 6px;
+	padding-right: 12px;
+}
+
+#radio-1:checked + label ~ ol li ol li {
+	display: none;
+}
+
+#radio-2:checked + label ~ ol li ol li ol li {
+	display: none;
+}
+
+#radio-3:checked + label ~ li ol li ol li {
+	display: none;
+}
+/*End Content*/
+
+
+
+/*=============================
+	20. Start Footer CSS
+===============================*/
+.footer {
+	background: #222;
+}
+
+
+/*=============================
+	End Footer CSS
+===============================*/
+
+
+/*=============================
+	Import File CSS
+===============================*/
+#one {
+	margin-top: 50px;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+}
+
+.it .btn-orange {
+	background-color: gray;
+	border-color: #777 !important;
+	color: white;
+	text-align: left;
+	
+}
+
+.it input.form-control {
+	height: 54px;
+	border: none;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	border-bottom: 1px solid #ddd;
+	box-shadow: none;
+}
+
+.it .form-control:focus {
+	border-color: #ff4d0d;
+	box-shadow: none;
+	outline: none;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+	color: #999;
+	background: rgba(0, 0, 0);
+	padding: 10px 20px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+	.fileUpload input.upload {
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		filter: alpha(opacity=0);
+	}
+
+.it .btn-new, .it .btn-next {
+	margin: 30px 0px;
+	border-radius: 0px;
+	background-color: #333;
+	color: #f5f5f5;
+	font-size: 16px;
+	width: 155px;
+}
+
+.it .btn-next {
+	background-color: #ff4d0d;
+	color: #fff;
+}
+
+.it .btn-check {
+	cursor: pointer;
+	line-height: 54px;
+	color: red;
+}
+
+.it .uploadDoc {
+	margin-bottom: 20px;
+}
+
+.it .uploadDoc {
+	margin-bottom: 20px;
+}
+
+.it .btn-orange img {
+	width: 30px;
+}
+
+p {
+	font-size: 16px;
+	text-align: center;
+	margin: 30px 0px;
+}
+
+.it #uploader .docErr {
+	position: absolute;
+	right: auto;
+	left: 10px;
+	top: -56px;
+	padding: 10px;
+	font-size: 15px;
+	background-color: #fff;
+	color: red;
+	box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+	display: none;
+}
+
+	.it #uploader .docErr:after {
+		content: '\f0d7';
+		display: inline-block;
+		font-family: FontAwesome;
+		font-size: 50px;
+		color: #fff;
+		position: absolute;
+		left: 30px;
+		bottom: -40px;
+		text-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+	}
+
+#btnUpload {
+	cursor: pointer;
+	background: black;
+	color: white;
+}
+/*=============================
+	End Import File CSS
+===============================*/
+.contentBlock {
+	padding-top: 15px;
+}

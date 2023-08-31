@@ -1,0 +1,55 @@
+﻿@using System.Data
+@{
+    ViewData["Title"] = "Импорт данных";
+}
+
+    <div class="row it">
+        <div class="col-sm-offset-1 col-sm-12" id="one">
+            <p>
+                Используйте форматы '.xls', '.xlsx', '.csv'.
+            </p><br>
+            <div class="row">
+                <div class="col-sm-offset-4 col-sm-4 form-group">
+                    <h3 class="text-center">Импорт данных</h3>
+                </div>
+            </div>
+            <div id="uploader">
+                <div class="row uploadDoc">
+                    <div class="col-sm-12">
+                        <div class="fileUpload btn-orange">
+                            <input type="file" class="upload up" id="up" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a id="btnUpload" class="btn"> Загрузить</a>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#btnUpload").click(function () {
+            var formData = new FormData();
+            var fUploadFile = document.getElementById("up");
+            var myFile = fUploadFile.files[0];
+            if (myFile == null)
+                return;
+            formData.append("file", myFile);
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("UploadFile", "Import")',
+                contentType: false,
+                processData: false,
+                data: formData,
+                complete: function (data) {
+                    alert("Импорт завершен");
+                    window.location = '/';
+                }
+            })
+        })
+    })
+</script>
+

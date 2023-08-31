@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ContractManager.Models.Contract>
+@{
+    ViewData["Title"] = "Список договоров";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ol class="wtree">
+    @foreach (var item in Model)
+    {
+    <li>
+        <span> <b>Код:</b> @Html.DisplayFor(modelItem => item.Code), <b>Название:</b> @Html.DisplayFor(modelItem => item.Caption), <b>Клиент:</b> @Html.DisplayFor(modelItem => item.Client)</span>
+
+        @if (item.StageCantracts != null && item.StageCantracts.Count() > 0)
+        {
+            <ol>
+                @foreach (var stageCantract in item.StageCantracts)
+                {
+                    <li> <b>Название:</b> @Html.DisplayFor(modelItem => stageCantract.Caption), <b>Дата начала:</b> @Html.DisplayFor(modelItem => stageCantract.DateBegin), <b>Дата окончания:</b> @Html.DisplayFor(modelItem => stageCantract.DateEnd)</li>
+                }
+            </ol>
+         }
+    </li>
+    }
+</ol>

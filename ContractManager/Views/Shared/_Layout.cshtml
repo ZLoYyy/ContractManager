@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content=''>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Tag  -->
+    <title>ContractManager</title>
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/css/style.css">
+    
+</head>
+<body class="js">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <partial name="_Header" />
+
+    <!-- Content -->
+    <div class="container contentBlock">
+        @RenderBody()
+    </div>
+    <!-- Footer -->
+    <partial name="_Footer" />
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/nicesellect.js"></script>    
+    <script src="~/js/active.js"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+</body>
+</html>
